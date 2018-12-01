@@ -1,6 +1,5 @@
 $input = Get-Content "day1_input.txt"
 $result = 0
-
 foreach ($n in $input) {
     $result = $result + $n
 }
@@ -12,7 +11,6 @@ $result = 0
 while ($twice -eq -1) {
     foreach ($n in $input) {
         $result = $result + $n
-        #"Got result: " + $result + " and n was: " + $n
         $couldBeAdded = $reached.Add($result)
         if (-Not $couldBeAdded) {
             $twice = $result
